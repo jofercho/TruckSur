@@ -5,23 +5,20 @@ $slide-height: 100%;
 $slide-width: 100%;
 $color-gold: #FFD700;
 
-html, body
-{
+html, body {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
 }
 
-.main
-{
+.main {
   height: 100%;
-  margin-top: 1px;   /* smooth scrolling */
+  margin-top: 1px; /* smooth scrolling */
   -webkit-overflow-scrolling: touch;
 }
 
-.vertical-slide
-{
+.vertical-slide {
   background-attachment: fixed;
   width: $slide-width;
   height: $slide-height;
@@ -29,24 +26,23 @@ html, body
   padding: 30px;
 }
 
-.carousel-inner
-{
-    img
-    {
-      margin: auto;
-    }
+.carousel-inner {
+  img {
+    margin: auto;
+  }
 }
 
-#vertical-slide1
-{
+#vertical-slide2 {
   background-image: url(../images/background.png);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-#vertical-slide2
-{
-  background-image: url(../images/pattern.png);
-  background-repeat: repeat;
+#vertical-slide1 {
+  background: {
+    color: white;
+  }
+
+
 
 }

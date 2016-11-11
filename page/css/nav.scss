@@ -1,7 +1,9 @@
 /* *********************************
            Variables
   ********************************** */
-$navbar-height: 50px;
+$small-navbar-height: 50px;
+$big-navbar-height1920x900: 900px;
+$big-navbar-height1280x600: 600px;
 $big-logo-padding: 15px; // adjust these 2 values
 $small-logo-padding: 2px; // of bottom padding to look nice
 
@@ -40,8 +42,8 @@ ul.nav {
            Toolbar Logo
   ********************************** */
 .small-logo-container {
-    padding-top: $navbar-height;
-    height: $navbar-height;
+    padding-top: 10px;
+    height: $small-navbar-height;
     overflow: hidden;
   }
 
@@ -55,16 +57,37 @@ ul.nav {
            Big Logo
   ********************************** */
 .big-logo-row {
-  background: gold;
+  height: 100%;
+  background: 
+  {
+    image: url("../images/titleBG.png");
+    size: cover;
+    attachment: fixed;
+
+  }
+
+  .vertical-center
+  {
+    min-height: 75%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 75vh; /* These two lines are counted as one :-)       */
+
+    display: flex;
+    align-items: center;
+  }
 
   .big-logo-container {
-    padding-top: $navbar-height;
+    padding-top: $small-navbar-height;
+
+    //@media (min-width: 1280px) { height: $big-navbar-height1280x600; }
+    //@media (min-width: 1920px) { height: $big-navbar-height1920x900; }
+
   }
 
   h1 {
     font-size: 2em;
     margin:0;
     padding:0 0 $big-logo-padding 0;
+    text-align: center;
 
     @media (min-width: 400px) { font-size: 2.5em; }
     @media (min-width: 440px) { font-size: 3.5em; }
