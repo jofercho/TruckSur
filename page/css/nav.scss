@@ -11,31 +11,52 @@ $small-logo-padding: 2px; // of bottom padding to look nice
 /* *********************************
    Some Style Overrides on Bootstrap
   ********************************** */
-.navbar-inverse {
-   background: rgba(62,195,246,0);
-  border-bottom: none;
-}
-.navbar-inverse .navbar-toggle {
-  border: 1px solid #333;
-  border-color: rgba(255,255,255,0.7);
+//.navbar-inverse {
+//   background: rgba(62,195,246,0);
+//  border-bottom: none;
+//}
+//.navbar-inverse .navbar-toggle {
+//  border: 1px solid #333;
+//  border-color: rgba(255,255,255,0.7);
+//}
+//
+//.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+//   border-color: transparent;
+//  @media (max-width: 767px) {
+//    background: rgba(255,255,255,0.75);
+//  }
+//}
+//.navbar-inverse .navbar-nav > li > a {
+//color: black;
+//
+//
+//}
+//.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
+//color: #22F;
+//
+//}
+//ul.nav {
+//}
+
+.affix {
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  left:0;
 }
 
-.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
-   border-color: transparent;
-  @media (max-width: 767px) {
-    background: rgba(255,255,255,0.75);
+.affix + .container-fluid {
+  padding-top: 70px;
+}
+
+/* Tablet
+------------------------- */
+@media (max-width: 767px) {
+  .bs-docs-sidenav.affix {
+    position: static;
+    width: auto;
+    top: 0;
   }
-}
-.navbar-inverse .navbar-nav > li > a {
-color: black;
-
-
-}
-.navbar-inverse .navbar-nav > li > a:hover, .navbar-inverse .navbar-nav > li > a:focus {
-color: #22F;
-
-}
-ul.nav {
 }
 
 /* *********************************
@@ -58,13 +79,6 @@ ul.nav {
   ********************************** */
 .big-logo-row {
   height: 100%;
-  background: 
-  {
-    image: url("../images/titleBG.png");
-    size: cover;
-    attachment: fixed;
-
-  }
 
   .vertical-center
   {
@@ -75,6 +89,31 @@ ul.nav {
     align-items: center;
   }
 
+  .big-logo
+  {
+    font-family: Nirmala;
+    color: white;
+    padding-bottom: 0;
+
+    @media (min-width: 400px) { font-size: 3.5em; }
+    @media (min-width: 440px) { font-size: 4.5em; }
+    @media (min-width: 500px) { font-size: 5.5em; }
+    @media (min-width: 768px) { font-size: 8.0em; }
+    @media (min-width: 1200px) { font-size: 10em; }
+  }
+
+  .big-logo-moto
+  {
+    font-family: Arial;
+    color: white;
+
+    @media (min-width: 400px) { font-size: 1.2em; letter-spacing: 1.0em; padding-left: 0.8em}
+    @media (min-width: 440px) { font-size: 1.5em; }
+    @media (min-width: 500px) { font-size: 2.0em; }
+    @media (min-width: 768px) { font-size: 2.8em; letter-spacing: 1.1em; padding-left: 0.9em;}
+    @media (min-width: 1200px) { font-size: 5em; letter-spacing: 0.53em; padding-left: 0.8em; }
+  }
+
   .big-logo-container {
     padding-top: $small-navbar-height;
 
@@ -83,17 +122,110 @@ ul.nav {
 
   }
 
-  h1 {
-    font-size: 2em;
-    margin:0;
-    padding:0 0 $big-logo-padding 0;
-    text-align: center;
+  //h1 {
+  //  font-size: 2em;
+  //  margin:0;
+  //  padding:0 0 $big-logo-padding 0;
+  //  text-align: center;
+  //
+  //  @media (min-width: 400px) { font-size: 2.5em; }
+  //  @media (min-width: 440px) { font-size: 3.5em; }
+  //  @media (min-width: 500px) { font-size: 4.5em; }
+  //  @media (min-width: 630px) { font-size: 5.5em;  }
+  //  @media (min-width: 768px) { font-size: 6.0em; padding-bottom: $big-logo-padding * 2; }
+  //  @media (min-width: 1200px) { font-size: 8em; }
+  //}
+}
 
-    @media (min-width: 400px) { font-size: 2.5em; }
-    @media (min-width: 440px) { font-size: 3.5em; }
-    @media (min-width: 500px) { font-size: 4.5em; }
-    @media (min-width: 630px) { font-size: 5.5em;  }
-    @media (min-width: 768px) { font-size: 6.0em; padding-bottom: $big-logo-padding * 2; }
-    @media (min-width: 1200px) { font-size: 8em; }
+.main-logo
+{
+  display: block;
+  margin: auto;
+}
+
+/* *********************************
+           Nav Bar
+  ********************************** */
+
+#mainNavbar
+{
+  bottom: 0;
+  color: #414141;
+  height: 0;
+  left: 0;
+  margin-left: 3%;
+  position: absolute;
+  width: 100%;
+
+  .small-logo-title
+  {
+    float: left;
+    color: #414141;
+    font-size: 2.5em;
+    padding: 0;
+    margin: 0;
+  }
+
+  a{
+    font-family: Lato;
+  }
+
+  ul a:hover
+  {
+    background-color: #5E1213;
+    color: white;
+  }
+
+  ul a:focus
+  {
+    background-color: #5E1213;
+    color: white;
+  }
+
+  .nav-bar-logo
+  {
+    padding-left: 5%;
+  }
+
+  .navbar-brand
+  {
+    padding: 0;
+    float: none;
+    position: relative;
+  }
+
+  ul
+  {
+    float: right;
+    height: 100%;
+    padding-right: 5%;
+
+    li
+    {
+      height: 100%;
+      font-size: 2em;
+      font-family: Lato;
+      display: flex;
+      align-items: center;
+
+      a
+      {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        color: inherit;
+        a:hover a:focus
+        {
+          background-color: brown;
+        }
+      }
+
+    }
   }
 }
+
+//#secondNavBar
+//{
+//  visibility: hidden;
+//}
+
