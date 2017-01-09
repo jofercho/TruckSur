@@ -29,3 +29,4 @@
 //     $('.navbar').css({"box-shadow": "none"});
 //   }
 // });
+$(document).ready();
