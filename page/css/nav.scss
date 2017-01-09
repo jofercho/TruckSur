@@ -146,36 +146,55 @@ $small-logo-padding: 2px; // of bottom padding to look nice
 /* *********************************
            Nav Bar
   ********************************** */
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .open > a {
+  background-image: none;
+  box-shadow: 0 3px 9px rgba(0, 0, 0, 0.25) inset;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus, .navbar-inverse .navbar-nav > .active > a:hover {
+  background-color: #5E1213;
+}
 
 #mainNavbar
 {
   bottom: 0;
   color: #414141;
-  height: 0;
   left: 0;
-  margin-left: 3%;
   position: absolute;
   width: 100%;
-
-  .small-logo-title
+  border-color: transparent;
+  background-image: none;
+  background-color: transparent;
+  .navbar-brand
   {
     float: left;
     color: #414141;
-    font-size: 2.5em;
-    padding: 0;
     margin: 0;
+    padding-left: 20px;
+    line-height: initial;
+    @media (min-width: 800px) { font-size: 2.0em; }
+    @media (min-width: 1000px) { font-size: 2.5em; }
+
   }
+
+
 
   a{
     font-family: Lato;
+    font-weight: bold;
   }
 
+  ul a:active
+  {
+    background-image: none;
+    background-color: #5E1213;
+    color: white;
+  }
   ul a:hover
   {
     background-color: #5E1213;
     color: white;
   }
-
   ul a:focus
   {
     background-color: #5E1213;
@@ -189,7 +208,6 @@ $small-logo-padding: 2px; // of bottom padding to look nice
 
   .navbar-brand
   {
-    padding: 0;
     float: none;
     position: relative;
   }
@@ -198,15 +216,17 @@ $small-logo-padding: 2px; // of bottom padding to look nice
   {
     float: right;
     height: 100%;
-    padding-right: 5%;
+    padding-right: 20px;
 
     li
     {
       height: 100%;
-      font-size: 2em;
       font-family: Lato;
       display: flex;
       align-items: center;
+
+      @media (min-width: 1000px) { font-size: 1.0em; }
+      @media (min-width: 1100px) { font-size: 2.0em; }
 
       a
       {
@@ -214,7 +234,7 @@ $small-logo-padding: 2px; // of bottom padding to look nice
         display: flex;
         align-items: center;
         color: inherit;
-        a:hover a:focus
+        a:hover a:focus a:active
         {
           background-color: brown;
         }
